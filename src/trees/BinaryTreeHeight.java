@@ -1,7 +1,5 @@
 package trees;
 
-import lombok.Data;
-import lombok.NonNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
@@ -11,14 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem
  */
-
-@Data
-class Node {
-    @NonNull
-    int data;
-    Node left;
-    Node right;
-}
 
 public class BinaryTreeHeight {
     public static int height(Node root) {
