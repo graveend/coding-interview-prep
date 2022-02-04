@@ -1,6 +1,8 @@
-import java.util.function.Function;
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
+
+import java.util.function.Function;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HelloWorld {
     public static Function<String, String> helloWorldMethod = name -> String.format("Hello %s!", name);
@@ -9,6 +11,6 @@ public class HelloWorld {
 class HelloWorldTest {
     @Test
     public void TestHelloWorld() {
-        Assert.assertEquals("Hello Molly!", HelloWorld.helloWorldMethod.apply("Molly"));
+        assertEquals("Hello Molly!", HelloWorld.helloWorldMethod.apply("Molly"));
     }
 }
