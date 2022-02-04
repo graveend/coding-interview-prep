@@ -3,3 +3,7 @@ out
 *.iml
 .vscode
 lib
+.gradle
+build
+.gradle
+build
