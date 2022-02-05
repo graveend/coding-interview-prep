@@ -3,7 +3,7 @@
 package arrays
 
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.Assertions.assertEquals
 
 fun getFizzbuzz(n: Int): String {
     val fizz = "Fizz"

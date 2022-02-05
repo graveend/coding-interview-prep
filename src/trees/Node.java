@@ -6,7 +6,7 @@ import lombok.NonNull;
 @Data
 public class Node {
     @NonNull
-    int data;
+    Integer data;
     Node left;
     Node right;
 }

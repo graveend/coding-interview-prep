@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.Assertions.assertEquals
 
 fun helloWorld(name: String = "World"): String {
     return "Hello, ${name}!"
