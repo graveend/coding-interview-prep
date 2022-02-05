@@ -1,12 +1,9 @@
 package stack;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
-
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BalancedBrackets {
@@ -17,31 +14,32 @@ public class BalancedBrackets {
      * The function accepts STRING s as parameter.
      */
 
-    private static String closingBrackets = ")}]";
-    private static String openingBrackets = "({[";
-
+    /**
+     * Solution
+     */
     public static String isBalanced(String s) {
-        // Write your code here
         Stack<String> stack = new Stack<>();
-        char[] chArray = s.toCharArray();
-        for (char c : chArray) {
-            String value = String.valueOf(c);
+        String[] substrings = s.split("");
+
+        for (String ch : substrings) {
             if (!stack.isEmpty()) {
-                if (closingBrackets.contains(value)) {
-                    if (openingBrackets.indexOf(stack.peek()) != closingBrackets.indexOf(value)) return "NO";
+                String closingBrackets = ")}]";
+                if (closingBrackets.contains(ch)) {
+                    String openingBrackets = "({[";
+                    if (openingBrackets.indexOf(stack.peek()) != closingBrackets.indexOf(ch)) return "NO";
                     stack.pop();
                 } else {
-                    stack.push(value);
+                    stack.push(ch);
                 }
             } else {
-                stack.push(value);
+                stack.push(ch);
             }
         }
         return stack.isEmpty() ? "YES" : "NO";
     }
 
     public static List<String> callMethod(List<String> inputs) {
-        List<String> output = new ArrayList<String>();
+        List<String> output = new ArrayList<>();
         for (String input : inputs) {
             output.add(isBalanced(input));
         }
@@ -52,15 +50,15 @@ public class BalancedBrackets {
 class BalancedBracketsTest {
     @Test
     public void TestBalancedBrackets() {
-        List<String> output = BalancedBrackets.callMethod(Arrays.asList("{[()]}"));
-        List<String> expected = Arrays.asList("YES");
+        List<String> output = BalancedBrackets.callMethod(List.of("{[()]}"));
+        List<String> expected = List.of("YES");
         assertEquals(expected, output);
     }
 
     @Test
     public void TestUnbalancedBrackets() {
-        List<String> output = BalancedBrackets.callMethod(Arrays.asList("{[()"));
-        List<String> expected = Arrays.asList("NO");
+        List<String> output = BalancedBrackets.callMethod(List.of("{[()"));
+        List<String> expected = List.of("NO");
         assertEquals(expected, output);
     }
 }
