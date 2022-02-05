@@ -9,22 +9,25 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BinaryTreeLevelOrderTraversal {
 
+    /*
+     *                  5
+     *           3           6
+     *        1     4
+     *
+     *        output: 5, 3, 6, 1, 4
+     */
+
     /**
      * Solution
      */
     public static void levelOrder(Node root) {
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
-        queue.add(null);
         while (!queue.isEmpty()) {
             Node current = queue.poll();
-            if (current == null) {
-                continue;
-            }
             System.out.print(current.data + " ");
             if (current.left != null) queue.add(current.left);
             if (current.right != null) queue.add(current.right);
-            queue.add(null);
         }
     }
 
