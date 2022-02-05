@@ -30,6 +30,8 @@ sourceSets {
 }
 
 dependencies {
+    // https://www.baeldung.com/java-testing-system-out-println
+    testImplementation("com.github.stefanbirkner:system-lambda:1.2.1")
     // https://www.baeldung.com/junit-5-gradle
     testImplementation(platform("org.junit:junit-bom:5.8.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")

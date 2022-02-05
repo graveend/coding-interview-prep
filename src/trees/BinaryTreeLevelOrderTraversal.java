@@ -1,17 +1,16 @@
 package trees;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import org.junit.jupiter.api.Test;
+import static com.github.stefanbirkner.systemlambda.SystemLambda.tapSystemOut;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BinaryTreeLevelOrderTraversal {
 
     /**
      * Solution
-     *
-     * @param root
      */
     public static void levelOrder(Node root) {
         Queue<Node> queue = new LinkedList<>();
@@ -59,8 +58,8 @@ public class BinaryTreeLevelOrderTraversal {
 
     public static Node constructTree(int[] data) {
         Node root = null;
-        for (int i = 0; i < data.length; i++) {
-            root = insert(root, data[i]);
+        for (int datum : data) {
+            root = insert(root, datum);
         }
         return root;
     }
@@ -68,10 +67,11 @@ public class BinaryTreeLevelOrderTraversal {
 
 class TestBinaryTreeLevelOrderTraversal {
     @Test
-    public void TestBinaryTreeHeight() {
+    public void TestBinaryTreeHeight() throws Exception {
         Node root = BinaryTreeLevelOrderTraversal.constructTree(new int[]{1, 2, 5, 3, 6, 4});
         String expected = "1 2 5 3 6 4 ";
-        BinaryTreeLevelOrderTraversal.levelOrder(root);
+        String text = tapSystemOut(() -> BinaryTreeLevelOrderTraversal.levelOrder(root));
+        assertEquals(expected, text);
     }
 }
 
