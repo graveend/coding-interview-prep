@@ -70,8 +70,8 @@ class TestBinaryTreeLevelOrderTraversal {
     public void TestBinaryTreeHeight() throws Exception {
         Node root = BinaryTreeLevelOrderTraversal.constructTree(new int[]{1, 2, 5, 3, 6, 4});
         String expected = "1 2 5 3 6 4 ";
-        String text = tapSystemOut(() -> BinaryTreeLevelOrderTraversal.levelOrder(root));
-        assertEquals(expected, text);
+        String returned = tapSystemOut(() -> BinaryTreeLevelOrderTraversal.levelOrder(root));
+        assertEquals(expected, returned);
     }
 }
 

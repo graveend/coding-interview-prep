@@ -1,18 +1,22 @@
-import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
 fun helloWorld(name: String = "World"): String {
     return "Hello, ${name}!"
 }
 
-class Test {
+class HelloWorldKotlinTest {
     @Test
     fun helloWorldReturnsPersonalizedMessage() {
-        assertEquals("Hello, Molly!", helloWorld("Molly"))
+        val expected = "Hello, Molly!"
+        val returned = helloWorld("Molly")
+        assertEquals(expected, returned)
     }
 
     @Test
     fun helloWorldReturnsGenericMessage() {
-        assertEquals("Hello, World!", helloWorld())
+        val expected = "Hello, World!"
+        val returned = helloWorld()
+        assertEquals(expected, returned)
     }
 }
