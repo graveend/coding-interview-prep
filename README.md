@@ -10,3 +10,6 @@ This is a collection of coding challenges that I've solved, in preparation for c
 - Import project from external model -> Gradle
 
 You should now be able to add Java or Kotlin files and run individual tests using the editor.
+
+I focus on Java/Kotlin in this repo. For a Python/Go approach,
+checkout https://github.com/bluprince13/coding-interview-prep
