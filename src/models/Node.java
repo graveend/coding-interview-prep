@@ -1,4 +1,4 @@
-package trees;
+package models;
 
 import lombok.Data;
 import lombok.NonNull;
@@ -6,7 +6,7 @@ import lombok.NonNull;
 @Data
 public class Node {
     @NonNull
-    Integer data;
-    Node left;
-    Node right;
+    public Integer data;
+    public Node left;
+    public Node right;
 }

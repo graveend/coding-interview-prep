@@ -3,6 +3,8 @@ package trees;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+
+import models.Node;
 import org.junit.jupiter.api.Test;
 import static com.github.stefanbirkner.systemlambda.SystemLambda.tapSystemOut;
 import static org.junit.jupiter.api.Assertions.assertEquals;
