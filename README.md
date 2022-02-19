@@ -13,3 +13,18 @@ You should now be able to add Java or Kotlin files and run individual tests usin
 
 I focus on Java/Kotlin in this repo. For a Python/Go approach,
 checkout https://github.com/bluprince13/coding-interview-prep
+
+
+Questions
+1. Two Sum
+
+
+How to solve?
+1. Verify the constraints
+    - check for positive and negative values?
+    - dupilicate numbers?
+    - Will there always be a solution available?
+    - Can there be multiple solution to this question?
+    
+2. Write out some test cases
+
