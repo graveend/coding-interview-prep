@@ -17,6 +17,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Output: 49
  * Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
  *
+ *
+ * Solution: Easy to understand
+ * https://leetcode.com/problems/container-with-most-water/discuss/1781032/Explaining-Why-the-O(N)-Solution-Works-in-Simple-Language-with-Illustrative-Diagrams
  */
 public class ContainerWithMostWater {
     public static int maxArea(int[] height) {
