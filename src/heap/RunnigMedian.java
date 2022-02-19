@@ -27,14 +27,15 @@ public class RunnigMedian {
      */
 
     // keeps track of the LARGE numbers. Topmost element is smallest i it.
-    private static PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+    private static PriorityQueue<Integer> minHeap;
 
     // keeps track of the SMALL numbers. Topmost element is highest i it.
-    private static PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+    private static PriorityQueue<Integer> maxHeap;
 
 
     public static List<Double> runningMedian(List<Integer> datas) {
-
+        minHeap = new PriorityQueue<>();
+        maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         List<Double> result = new ArrayList<>();
         for (Integer data : datas) {
             // update heaps
