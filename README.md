@@ -16,7 +16,9 @@ checkout https://github.com/bluprince13/coding-interview-prep
 
 
 Questions
-1. Two Sum
+1. [Two Sum](https://leetcode.com/problems/two-sum/)
+2. [ContainerWithMostWater](https://leetcode.com/problems/container-with-most-water/)
+3. [TrappingRainWater](https://leetcode.com/problems/trapping-rain-water/) [IMP]
 
 
 How to solve?
