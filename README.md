@@ -22,11 +22,11 @@ Questions
 
 
 How to solve?
-1. Verify the constraints
-    - check for positive and negative values?
-    - dupilicate numbers?
+1. Verify the input constraints
+    - Check for positive and negative values?
+    - Dupilicate numbers?
     - Will there always be a solution available?
-    - Can there be multiple solution to this question?
+    - Can there be multiple solutions to this question?
     
 2. Write out some test cases
 
