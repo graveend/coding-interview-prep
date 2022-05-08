@@ -34,6 +34,56 @@ public class BackspaceStringCompare {
         }
         return sb.toString();
     }
+
+    // Best approach - 2 pointers - refer
+    public static boolean backspaceCompareOptimalSolution(String s, String t) {
+        int i = s.length() - 1;
+        int j = t.length() - 1;
+        int sCount = 0;
+        int tCount = 0;
+        while(i >= 0 || j >= 0) {
+
+            // skip s
+            while( i >= 0) {
+                if( s.charAt(i) == '#') {
+                    sCount++;
+                    i--;
+                } else if (sCount > 0) {
+                    sCount--;
+                    i--;
+                } else {
+                    break;
+                }
+            }
+
+            // skip t
+            while( j >= 0) {
+                if( t.charAt(j) == '#') {
+                    tCount++;
+                    j--;
+                } else if (tCount > 0) {
+                    tCount --;
+                    j--;
+                } else {
+                    break;
+                }
+            }
+
+            // after skipping all the unnecessary character check if the characters are matching, if not return false
+            if( i >= 0 && j>=0 && s.charAt(i) != t.charAt(j)) {
+                return false;
+            }
+
+            // check if any one of the string is having extra characters compared to other string
+            if( i >= 0 != j >= 0) return false;
+
+            i--;
+            j--;
+
+        }
+        return true;
+
+    }
 }
 
 class TestBackspaceStringCompare {
