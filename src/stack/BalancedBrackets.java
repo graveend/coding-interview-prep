@@ -1,6 +1,7 @@
 package stack;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 import org.junit.jupiter.api.Test;
@@ -50,15 +51,15 @@ public class BalancedBrackets {
 class BalancedBracketsTest {
     @Test
     public void TestBalancedBrackets() {
-        List<String> output = BalancedBrackets.callMethod(List.of("{[()]}"));
-        List<String> expected = List.of("YES");
+        List<String> output = BalancedBrackets.callMethod(Arrays.asList("{[()]}"));
+        List<String> expected = Arrays.asList("YES");
         assertEquals(expected, output);
     }
 
     @Test
     public void TestUnbalancedBrackets() {
-        List<String> output = BalancedBrackets.callMethod(List.of("{[()"));
-        List<String> expected = List.of("NO");
+        List<String> output = BalancedBrackets.callMethod(Arrays.asList("{[()"));
+        List<String> expected = Arrays.asList("NO");
         assertEquals(expected, output);
     }
 }
