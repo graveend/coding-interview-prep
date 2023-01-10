@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * https://leetcode.com/problems/linked-list-cycle/description/
+ */
 public class LinkedListCycle {
     public static boolean hasCycle(ListNode head) {
         ListNode slow = head;
