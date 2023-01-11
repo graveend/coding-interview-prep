@@ -17,6 +17,7 @@ public class WordPattern {
         Map<String, Character> map = new HashMap<>();
         String[] words = s.split(" ");
         char[] ch = pattern.toCharArray();
+        if(ch.length != words.length) return false;
         for(int i = 0; i < words.length; i++) {
             if( map.containsKey(words[i]) ) {
                 if(!map.get(words[i]).equals(ch[i])) {
