@@ -1,10 +1,11 @@
 package arrays.easy;
 
+
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
  * https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/
@@ -31,6 +32,6 @@ class TestLongestSubsequenceWithLimitedSum {
         int[] queries = new int[]{3,10,21};
         int[] expected = new int[]{2,3,4};
         int[] output = LongestSubsequenceWithLimitedSum.answerQueries(nums, queries);
-        assertEquals(expected, output);
+        assertArrayEquals(expected, output);
     }
 }
