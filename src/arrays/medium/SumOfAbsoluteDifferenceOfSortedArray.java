@@ -7,6 +7,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * https://leetcode.com/problems/sum-of-absolute-differences-in-a-sorted-array/description/
+ *
+ * HINT:
+ * nums = [2,3,5]
+ *
+ * result[i] = |nums[i] - nums[0]| + ... |nums[i] - nums[i-1]|   +  |nums[i] - nums[i]|    +   |nums[i] - nums[i+1]| + .... |nums[i] - nums[n-1]|
+ *
+ * => resilt[i] = (nums[i] * i-1) - (nums[0] + ...+ nums[i-1])     +   0       +       (num[i+1] + ...+ num[n-1]) - (n-i)nums[i]
+ *
+ * => result[i] = ((i)* nums[i]) - prefixSum(nums[i-1]) + 0 + (prefixSum(n-1) - prefixSum(i)) - (n-i-1) * num[i];
  */
 public class SumOfAbsoluteDifferenceOfSortedArray {
     public static int[] getSumAbsoluteDifferences(int[] nums) {
