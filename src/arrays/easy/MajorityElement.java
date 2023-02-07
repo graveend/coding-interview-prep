@@ -30,6 +30,23 @@ public class MajorityElement {
         }
         return number;
     }
+
+    public static int majorityElementUsingBoyerMoore(int[] nums) {
+        int count = 0;
+        int majorityElem = nums[0];
+        for(int num: nums) {
+            if(majorityElem != num) {
+                count--;
+            } else {
+                count++;
+            }
+            if(count == 0) {
+                majorityElem = num;
+                count++;
+            }
+        }
+        return majorityElem;
+    }
 }
 
 class TestMajorityElement {
@@ -38,6 +55,14 @@ class TestMajorityElement {
         int[] nums = new int[]{3,2,3};
         int expected = 3;
         int output = MajorityElement.majorityElement(nums);
+        assertEquals(expected,output);
+    }
+
+    @Test
+    public void majorityElement2() {
+        int[] nums = new int[]{3,2,3};
+        int expected = 3;
+        int output = MajorityElement.majorityElementUsingBoyerMoore(nums);
         assertEquals(expected,output);
     }
 
