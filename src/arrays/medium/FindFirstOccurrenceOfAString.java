@@ -9,22 +9,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class FindFirstOccurrenceOfAString {
     public static int strStr(String haystack, String needle) {
-        int i = 0, j = 0;
-        int N = needle.length(), H = haystack.length();
-        if(haystack.length() < needle.length()) return -1;
-
-        while(j < haystack.length()) {
-            while(i < N && j < H && haystack.charAt(j) == needle.charAt(i)) {
-                i++;
+        int haylength=haystack.length();
+        int needlelength=needle.length();
+        if(haylength<needlelength)
+            return -1;
+        for(int i=0;i<= haylength - needlelength;i++){
+            int j=0;
+            while(j<needle.length() && haystack.charAt(i+j)==needle.charAt(j))
                 j++;
-            }
-            // reached end of Needle
-            if(i == N) {
-                return j - N;
-            } else if(i > 0) {
-                i = 0;
-            } else {
-                j++;
+            if(j==needle.length()){
+                return i;
             }
         }
         return -1;
@@ -38,6 +32,15 @@ class TestFindFirstOccurrenceOfAString {
         String haystack = "mississippi";
         String needle = "issip";
         int expected = 4;
+        int output = FindFirstOccurrenceOfAString.strStr(haystack, needle);
+        assertEquals(expected, output);
+    }
+
+    @Test
+    public void testStringIndex1() {
+        String haystack = "sadbutsad";
+        String needle = "sad";
+        int expected = 0;
         int output = FindFirstOccurrenceOfAString.strStr(haystack, needle);
         assertEquals(expected, output);
     }
