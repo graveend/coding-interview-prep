@@ -1,4 +1,4 @@
-package arrays.medium;
+package dp.medium;
 
 import org.junit.jupiter.api.Test;
 
