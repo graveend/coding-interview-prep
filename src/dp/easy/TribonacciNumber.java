@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * https://leetcode.com/problems/n-th-tribonacci-number/description/
+ */
 public class TribonacciNumber {
     public static int tribonacci(int n) {
          int[] dp = new int[n+1];
