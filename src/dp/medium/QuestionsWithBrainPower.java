@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * https://leetcode.com/problems/solving-questions-with-brainpower/description/
+ */
 public class QuestionsWithBrainPower {
     public static long mostPoints(int[][] questions) {
         int N = questions.length;
