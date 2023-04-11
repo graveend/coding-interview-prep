@@ -4,6 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ *
+ * Solution: https://www.youtube.com/watch?v=MnD8KhBHgRo
+ */
 public class NumberOfClosedIslands {
     public static int closedIsland(int[][] grid) {
         if(grid.length == 0 || grid[0].length == 0) {
