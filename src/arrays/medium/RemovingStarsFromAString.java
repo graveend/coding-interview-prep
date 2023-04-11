@@ -6,6 +6,9 @@ import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * https://leetcode.com/problems/removing-stars-from-a-string/
+ */
 public class RemovingStarsFromAString {
     public static String removeStars(String s) {
         Stack<Character> stack = new Stack<>();
