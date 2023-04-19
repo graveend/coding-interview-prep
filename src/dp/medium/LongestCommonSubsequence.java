@@ -4,6 +4,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * https://leetcode.com/problems/longest-common-subsequence/description/
+ *
+ * Example:
+ *
+             a b c d e
+         b   0 1 1 1 1
+         b   0 1 1 1 1
+         e.  0 1 1 1 2
+ */
 public class LongestCommonSubsequence {
     public static int longestCommonSubsequence(String text1, String text2) {
         int m = text1.length(), n = text2.length();
