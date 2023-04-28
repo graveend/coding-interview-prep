@@ -19,9 +19,7 @@ public class MaximumSubarray {
             } else {
                 sum += nums[i];
             }
-
             max = Math.max( max, sum);
-
         }
         return max;
     }
