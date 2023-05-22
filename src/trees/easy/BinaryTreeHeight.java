@@ -1,4 +1,4 @@
-package trees;
+package trees.easy;
 
 import models.Node;
 import org.junit.jupiter.api.Test;

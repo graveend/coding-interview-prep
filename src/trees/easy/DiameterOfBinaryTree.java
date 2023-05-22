@@ -1,6 +1,8 @@
-package trees;
+package trees.easy;
 
 import org.junit.jupiter.api.Test;
+import trees.TreeNode;
+import trees.TreeUtils;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
