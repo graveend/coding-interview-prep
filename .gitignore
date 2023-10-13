@@ -7,3 +7,4 @@ lib
 build
 .gradle
 build
+node_modules
